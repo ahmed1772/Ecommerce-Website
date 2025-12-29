@@ -1,0 +1,58 @@
+
+  <nav class="navbar navbar-expand-lg bg-light px-3 pb-0">
+  <!-- Left Icon / Logo -->
+  <a class="navbar-brand d-flex align-items-center">
+    <img src="/images/freshcart-logo.svg" alt="">
+
+  </a>
+
+  <!-- Toggler -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Center Nav Items -->
+  <div class="collapse navbar-collapse" id="navMenu">
+    @if (isLogin()) 
+    {
+      <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item mx-2">
+        <a class="nav-link active hover-green" routerLink="Home">Home</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link hover-green" routerLink="Cart">Cart</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link hover-green" routerLink="Products">Products</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link hover-green" routerLink="Categories">Categories</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link hover-green" routerLink="Brands">Brands</a>
+      </li>
+    </ul>
+    }
+  </div>
+
+  <div class="d-flex gap-3 align-items-center justify-content-center">
+    <p class="pt-3"><i class="fa-brands fa-instagram"></i></p>
+    <p class="pt-3"><i class="fa-brands fa-facebook"></i></p>
+    <p class="pt-3"><i class="fa-brands fa-tiktok"></i></p>
+    <p class="pt-3"><i class="fa-brands fa-twitter"></i></p>
+    <p class="pt-3"><i class="fa-brands fa-linkedin"></i></p>
+    <p class="pt-3"><i class="fa-brands fa-youtube"></i></p>
+  @if (!isLogin())
+   {
+      <a class="nav-link hover-green" routerLink="Register">Register</a>
+    <a class="nav-link hover-green" routerLink="Login">Login</a>
+   }
+   @if (isLogin())
+    {
+       <a class="nav-link hover-green logout" (click)="isLogout()">Logout</a>
+    }
+
+
+  </div>
+
+</nav>

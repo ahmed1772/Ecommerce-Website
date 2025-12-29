@@ -1,0 +1,7 @@
+.form-control:focus {
+  border-color: #198754 !important;       /* green border */
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25) !important; /* green glow */
+}
+img.width{width: 40px;}
+img.widtha{width: 100px;}
+img.widthaa{width: 110px;}

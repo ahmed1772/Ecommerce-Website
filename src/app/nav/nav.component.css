@@ -1,0 +1,6 @@
+.hover-green:hover {
+  color: #28a745 !important; /* Bootstrap green */
+}
+.logout {
+  cursor: pointer;
+}
